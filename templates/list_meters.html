@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>List Meters</title>  
+</head>  
+<body>  
+   
+<h1 align="center">List of the unique Meters</h1>  
+      
+    {% for row in rows %}   
+
+        <p align="center">
+            <a href={{url_for('meter', meter_id=row.id) }}> 
+                <button class=grey style="height:75px;width:150px"> 
+                    {{row.name}}
+                </button>
+            </a>
+        </p>  
+      
+    {% endfor %}  
+  
+</body>  
+</html> 
